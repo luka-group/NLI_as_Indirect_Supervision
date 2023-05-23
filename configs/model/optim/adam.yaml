@@ -1,0 +1,6 @@
+_target_: torch.optim.Adam
+lr: 0.001
+betas: [0.9, 0.999]
+eps: 1E-08
+weight_decay: 1E-4
+amsgrad: False

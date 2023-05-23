@@ -1,0 +1,11 @@
+# @package _global_
+
+# used when init model and test directly
+test_without_fit: True
+trainer:
+  limit_train_batches: 0
+  limit_val_batches: 0
+
+hydra:
+  job:
+    chdir: True

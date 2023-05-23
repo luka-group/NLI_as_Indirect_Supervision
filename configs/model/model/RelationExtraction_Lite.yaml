@@ -1,0 +1,9 @@
+_target_: src.models.components.RelationExtractionLite.RELite
+
+defaults:
+  - LITE.yaml
+
+# model_path: cnut1648/biolinkbert-large-mnli-snli
+model_path: roberta-large-mnli
+use_loss_weight: False
+abstain: False

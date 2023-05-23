@@ -1,0 +1,12 @@
+_target_: src.datamodules.DDI.DataModule
+
+data_dir: ${data_dir}/DDI_hf
+adaptive_neg_sample: False
+use_new_mask: True
+
+batch_size: 64
+num_workers: 10
+pin_memory: True
+
+# for logging
+dataset: DDI

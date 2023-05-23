@@ -1,0 +1,14 @@
+# @package _global_
+
+defaults:
+  - re.yaml
+  
+model:
+  num_negs: 1
+  model:
+    abstain: True
+    use_loss: RankingLoss
+    use_loss_weight: False
+
+datamodule:
+  adaptive_neg_sample: False

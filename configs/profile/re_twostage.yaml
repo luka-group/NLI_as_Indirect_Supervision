@@ -1,0 +1,14 @@
+# @package _global_
+
+defaults:
+  - re.yaml
+  
+model:
+  num_negs: 5
+  model:
+    use_loss: NCE+AC
+    use_loss_weight: True
+    use_ranking_sum_as_InfoNCE: False
+
+datamodule:
+  adaptive_neg_sample: False

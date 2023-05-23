@@ -1,0 +1,19 @@
+defaults:
+  - default.yaml
+
+gpus: -1
+
+min_epochs: 1
+max_epochs: 5
+
+# prints
+profiler: null
+
+# debugs
+# fast_dev_run: 2
+overfit_batches: 0
+limit_train_batches: 0.03
+limit_val_batches: 0.09
+limit_test_batches: 0.10
+track_grad_norm: -1
+detect_anomaly: True

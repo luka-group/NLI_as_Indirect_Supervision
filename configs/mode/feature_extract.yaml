@@ -1,0 +1,10 @@
+# @package _global_
+
+defaults:
+  - infer.yaml
+# also train & val
+test_only: False
+
+# model:
+#   as_feature_extractor: False
+#   as_temporal_feature_extractor: True

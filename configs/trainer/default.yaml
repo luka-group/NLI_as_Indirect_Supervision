@@ -1,0 +1,18 @@
+_target_: pytorch_lightning.Trainer
+
+gpus: -1
+
+min_epochs: 1
+max_epochs: 20
+
+accumulate_grad_batches: 1
+
+resume_from_checkpoint: null
+
+# number of validation steps to execute at the beginning of the training
+num_sanity_val_steps: 0
+gradient_clip_val: 1.0
+
+detect_anomaly: False
+
+precision: 16

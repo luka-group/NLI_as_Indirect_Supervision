@@ -1,0 +1,9 @@
+# for src.models.compoents.__init__.LITE
+
+margin: 0.1
+temperature: 1
+
+num_negs: ${..num_negs}
+
+use_softmax: True
+hypo_version: v1

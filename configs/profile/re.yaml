@@ -1,0 +1,30 @@
+# @package _global_
+
+# for RD training with LITE
+defaults:
+  - override /datamodule: chemprot
+  - override /model: Lite
+  - override /model/sch: null
+  - override /model/model: RelationExtraction_Lite
+  - override /callbacks: default
+
+model:
+  model:
+    margin: 0.7
+    temperature: 0.01
+    use_softmax: True
+    abstain: False
+    use_loss_weight: False
+    NCE_strength: 1.0
+    AC_strength: 1.0
+  optim:
+    lr: 1e-5
+  save_epoch: 5
+datamodule:
+  batch_size: 16
+  num_workers: 10
+  adaptive_neg_sample: False
+trainer:
+  accumulate_grad_batches: 1
+  max_epochs: 200
+  check_val_every_n_epoch: ${model.save_epoch}

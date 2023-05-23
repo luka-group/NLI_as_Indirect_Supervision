@@ -1,0 +1,54 @@
+# @package _global_
+
+# specify here default training configuration
+defaults:
+  - _self_
+  - model: null
+  - datamodule: null
+  - callbacks: wandb
+  - logger: many_loggers # set logger here or use command line (e.g. `python run.py logger=wandb`)
+  - trainer: default.yaml
+
+  - profile: null
+  # modes are special collections of config options for different purposes, e.g. debugging
+  - mode: default.yaml
+
+  # config for hyperparameter optimization
+  - hparams_search: null
+
+  # enable color logging
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+# path to original working directory
+# hydra hijacks working directory by changing it to the new log directory
+# so it's useful to have this path as a special variable
+# https://hydra.cc/docs/next/tutorials/basic/running_your_app/working_directory
+work_dir: ${hydra:runtime.cwd}
+# work_dir: /nas/home/jiashuxu/NQA
+
+# path to folder with raw data
+data_dir: ${work_dir}/data
+
+# runtime append logs/save/<wandbid>
+# save hydra - hydra config
+# ckpt
+output_dir: ${work_dir}/logs/save
+
+# pretty print config at the start of the run using Rich library
+print_config: True
+
+# disable python warnings if they annoy you
+ignore_warnings: True
+
+# evaluate on test set, using best model weights achieved during training
+# lightning chooses best weights based on metric specified in checkpoint callback
+test_after_training: True
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: 42
+
+# if set, restore from wandb logged best_ckpt
+# format <project>:<runid>
+restore_from_run: null
+resume_from_ckpt: null

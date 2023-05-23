@@ -1,0 +1,21 @@
+# --------- pytorch --------- #
+# torch>=1.12.1 # GPU version is preferred
+transformers>=4.21.1
+datasets>=2.2.2
+pytorch-lightning>=1.7.2
+wandb
+
+# --------- hydra --------- #
+hydra-core>=1.2.0
+hydra-colorlog>=1.2.0
+hydra-optuna-sweeper>=1.2.0
+
+# --------- others --------- #
+rich
+sentencepiece>=0.1.96
+ujson
+setuptools==59.5.0
+seqeval>=1.2.2
+scikit-learn
+tmuxp
+pandas

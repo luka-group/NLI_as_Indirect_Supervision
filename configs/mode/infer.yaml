@@ -1,0 +1,25 @@
+# @package _global_
+
+# doesn't train but only infer (test)
+# example usage:
+# `python run.py mode=infer`
+
+defaults:
+  - override /trainer: default.yaml
+  - override /callbacks: null
+  # - override /logger: null
+
+infer_mode: True
+# only infer on test
+test_only: True
+ckpt_path: null
+
+hydra:
+  # default output paths for all file logs
+  run:
+    dir: logs/infer/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: logs/infer/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}
+  job:
+    chdir: True

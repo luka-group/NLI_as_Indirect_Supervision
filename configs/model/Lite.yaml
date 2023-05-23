@@ -1,0 +1,10 @@
+_target_: src.models.Lite.LiteModule
+defaults:
+  - model: RelationExtraction_Lite
+  - optim: adamw
+  - sch: linear
+
+save_epoch: 50
+infer_output_path: ${output_dir}
+adaptive_neg_sample: ${datamodule.adaptive_neg_sample}
+num_negs: 1

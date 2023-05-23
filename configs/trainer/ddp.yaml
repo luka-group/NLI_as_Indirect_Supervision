@@ -1,0 +1,11 @@
+defaults:
+  - default.yaml
+
+# better not use fp16 if audio no smarter sampler
+precision: 16
+strategy:
+  _target_: pytorch_lightning.strategies.DDPStrategy
+  find_unused_parameters: False
+
+sync_batchnorm: True
+replace_sampler_ddp: True
