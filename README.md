@@ -58,10 +58,10 @@ We refer details in the [paper](https://arxiv.org/pdf/2212.10784.pdf).
 ## Reference
 If you find this repo useful, please cite our paper:
 ```
-@article{xu2022can,
+@inproceedings{xu2023can,
   title={Can NLI Provide Proper Indirect Supervision for Low-resource Biomedical Relation Extraction?},
   author={Xu, Jiashu and Ma, Mingyu Derek and Chen, Muhao},
-  journal={arXiv preprint arXiv:2212.10784},
-  year={2022}
+  booktitle={Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year={2023}
 }
 ```
